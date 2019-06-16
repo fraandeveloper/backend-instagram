@@ -7,7 +7,6 @@ const multer = require('multer');
 const routes = new express.Router();
 const upload = multer(uploadconfig);
 
-
 //Rota para cadastro e listagem de Posts
 routes.post('/posts', upload.single('image'), PostController.store);
 routes.get('/posts', PostController.index);

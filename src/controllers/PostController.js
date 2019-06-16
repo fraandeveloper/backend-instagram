@@ -37,6 +37,9 @@ module.exports = {
             hashtags,
             image: filename
         });
+
+        req.io.emit('Post', post);
+        
         return res.json(post);
     }
 }
