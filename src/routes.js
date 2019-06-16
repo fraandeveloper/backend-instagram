@@ -7,5 +7,6 @@ const routes = new express.Router();
 const upload = multer(uploadconfig);
 
 routes.post('/posts', upload.single('image'), PostController.store);
+routes.get('/posts', PostController.index);
 
 module.exports = routes;
