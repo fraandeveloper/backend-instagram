@@ -6,8 +6,6 @@ mongoose.connect('mongodb+srv://development:ctifpi@cluster0-cdehv.mongodb.net/te
     useNewUrlParser: true
 })
 
-app.get('/', (req, res) => {
-    return res.send('Hello world');
-});
+app.use(require('./routes'));
 
 app.listen(8000);
